@@ -1,0 +1,46 @@
+{
+    "name": "rbarden/hello",
+    "description": "An easy way to be contacted",
+    "keywords": [
+        "rbarden",
+        "hello"
+    ],
+    "homepage": "https://github.com/rbarden/hello",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Reid Barden"
+        }
+    ],
+    "require": {
+        "php": "^7.1"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rbarden\\Hello\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rbarden\\Hello\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Rbarden\\Hello\\HelloServiceProvider"
+            ]
+        }
+    }
+}
